@@ -1,0 +1,144 @@
+@import url(css/app.css);
+@import url(css/foundation.css);
+@import url(css/foundation.min.css);
+.cover {
+  background: #000000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  opacity: 1;
+  -webkit-transition: opacity 1500ms ease;
+  -moz-transition: opacity 1500ms ease;
+  -ms-transition: opacity 1500ms ease;
+  -o-transition: opacity 1500ms ease;
+  transition: opacity 1500ms ease; }
+  .cover.out {
+    opacity: 0; }
+
+.vline {
+  background: #d4d4d4;
+  width: 2px;
+  height: 64px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+#home .banner {
+  position: relative;
+  background: #000000; }
+  #home .banner .bg {
+    background-image: url(img/web-bg.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.5; }
+  #home .banner .grad {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    z-index: 1;
+    background: transparent;
+    /* Old browsers */
+    background: -moz-linear-gradient(top, transparent 0%, #000000 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, transparent), color-stop(100%, #000000));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, transparent 0%, #000000 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, transparent 0%, #000000 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, transparent 0%, #000000 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, transparent 0%, #000000 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 );
+    /* IE6-9 */ }
+  #home .banner .main-logo {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+    top: -10px;
+    opacity: 0;
+    -webkit-transition: top 500ms ease, opacity 1000ms ease;
+    -moz-transition: top 500ms ease, opacity 1000ms ease;
+    -ms-transition: top 500ms ease, opacity 1000ms ease;
+    -o-transition: top 500ms ease, opacity 1000ms ease;
+    transition: top 500ms ease, opacity 1000ms ease; }
+    #home .banner .main-logo.in {
+      opacity: 1;
+      top: 0; }
+    #home .banner .main-logo img {
+      display: inline-block;
+      width: 320px; }
+  #home .banner .down {
+    width: 0px;
+    height: 0px;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 12px solid #ffffff;
+    position: absolute;
+    bottom: 16px;
+    z-index: 2;
+    left: 50%;
+    margin-left: -12px;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transition: opacity 350ms ease;
+    -moz-transition: opacity 350ms ease;
+    -ms-transition: opacity 350ms ease;
+    -o-transition: opacity 350ms ease;
+    transition: opacity 350ms ease; }
+    #home .banner .down:hover {
+      opacity: 1; }
+    #home .banner .down.in {
+      opacity: 0.7; }
+#home .intro h1 {
+  text-align: center;
+  font-style: italic;
+  font-size: 28px;
+  color: #8c8c8c;
+  margin-top: 50px; }
+#home .intro .coin {
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 50px; }
+  #home .intro .coin img {
+    width: 120px; }
+#home .info {
+  background: #f5f8f7;
+  padding-top: 72px;
+  padding-bottom: 42px; }
+  #home .info .info-grid {
+    max-width: 720px; }
+  #home .info .info-cell {
+    margin-bottom: 30px; }
+    #home .info .info-cell .inner {
+      background: #ffffff;
+      padding: 32px;
+      text-align: center; }
+      #home .info .info-cell .inner img {
+        width: 120px;
+        margin-bottom: 32px; }
+      #home .info .info-cell .inner p {
+        margin-bottom: 0; }
+#home .footer {
+  background: #171717;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  text-align: center; }
+  #home .footer img {
+    display: inline-block;
+    width: 32px; }
+
+/*# sourceMappingURL=style.css.map */

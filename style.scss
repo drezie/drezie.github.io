@@ -1,0 +1,135 @@
+// Variables
+$green:#057f44;
+$green-dark:#034b29;
+$green-bg:#f5f8f7;
+$grey:#f2f1f0;
+$grey-dim:#8c8c8c;
+$black:#000000;
+$white:#ffffff;
+
+
+// Imports
+@import "css/app.css";
+@import "css/foundation.css";
+@import "css/foundation.min.css";
+@import "css/mixins";
+@import "css/helpers";
+
+#home{
+    .banner{
+        position:relative;
+        background:$black;
+        .bg{
+            background-image:url(img/web-bg.jpg);
+            background-size:cover;
+            background-position:50% 50%;
+            position:absolute;
+            width:100%;
+            height:100%;
+            left:0;
+            top:0;
+            opacity:0.5;
+        }
+        .grad{
+            position:absolute;
+            width:100%;
+            height:100%;
+            left:0;
+            top:0;
+            opacity:0.5;
+            z-index:1;
+            @include linearGradient(transparent, $black);
+        }
+        .main-logo{
+            position:relative;
+            z-index:2;
+            width:100%;
+            text-align:center;
+            top:-10px;
+            opacity:0;
+            @include transition(top 500ms ease, opacity 1000ms ease);
+            &.in{
+                opacity:1;
+                top:0;
+            }
+            img{
+                display:inline-block;
+                width:320px;
+            }
+        }
+        .down{
+            width: 0px;
+            height: 0px;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 12px solid $white;
+            position:absolute;
+            bottom:16px;
+            z-index:2;
+            left:50%;
+            margin-left:-12px;
+            cursor:pointer;
+            opacity:0;
+            @include transition(opacity 350ms ease);
+            &:hover{
+                opacity:1;
+            }
+            &.in{
+                opacity:0.7;
+            }
+        }
+    }
+
+    .intro{
+        h1{
+            text-align:center;
+            font-style:italic;
+            font-size:28px;
+            color:$grey-dim;
+            margin-top:50px;
+        }
+        .coin{
+            text-align:center;
+            margin-top:32px;
+            margin-bottom:50px;
+            img{
+                width:120px;
+            }
+        }
+    }
+
+    .info{
+        background:$green-bg;
+        padding-top:72px;
+        padding-bottom:72px - 30px;
+        .info-grid{
+            max-width:720px;
+        }
+        .info-cell{
+            margin-bottom:30px;
+            .inner{
+                background:$white;
+                padding:32px;
+                text-align:center;
+                img{
+                    width:120px;
+                    margin-bottom:32px;
+                }
+                p{
+                    margin-bottom:0;
+                }
+            }
+        }
+    }
+
+    .footer{
+        background:#171717;
+        padding-top:16px;
+        padding-bottom:16px;
+        text-align:center;
+        img{
+            display:inline-block;
+            width:32px;
+        }
+    }
+}
